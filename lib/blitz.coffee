@@ -3,22 +3,41 @@ class window.Blitz
     <div class="blitz hide">
       <div class="blitz-wrapper">
         <span class="blitz-message"></span>
-        <span class="blitz-spinner"></span>
+        <span class="blitz-spinner hide"></span>
         <a href="#" class="blitz-close">&times;</a>
       </div>
     </div>
   """
 
-  constructor: (container) ->
+  defaults:
+    autoHideDelay: 0
+
+  constructor: (container, options = {}) ->
     @container = container
+    @options   = options
 
-  notice: (message) ->
-    @_display(message, 'notice')
+  setOptions: (options) ->
+    @options[key] = value for key, value of options
 
-  alert: (message) ->
-    @_display(message, 'alert')
+  notice: (message, options = {}) ->
+    @_display(message, 'notice', options)
 
-  render: ->
+  alert: (message, options = {}) ->
+    @_display(message, 'alert', options)
+
+  hide: ->
+    @$wrapper.addClass('hide')
+    @$spinner.addClass('hide')
+
+  _display: (message, kind, options) ->
+    @_render()
+    @_bindDomEvents()
+    @_startAutoHide()
+    @_toggleSpinner(options.spinner)
+    @$message.text(message)
+    @$wrapper.addClass(kind).removeClass('hide')
+
+  _render: ->
     unless @_rendered
       @_rendered = true
 
@@ -29,7 +48,30 @@ class window.Blitz
 
       $(@container).append(@$wrapper)
 
-  _display: (message, kind, options) ->
-    @render()
-    @$message.text(message)
-    @$wrapper.addClass(kind).removeClass('hide')
+  _bindDomEvents: ->
+    unless @_domEventsBound
+      self = @
+
+      @$wrapper.on 'click.blitz', '.blitz-close', (event) ->
+        self.hide()
+
+  _startAutoHide: ->
+    @_clearTimeout()
+
+    if @options.autoHideDelay > 0
+      self     = @
+      callback = -> self.hide()
+
+      @autoHideTimeout = setTimeout(callback, @options.autoHideDelay)
+
+  _clearTimeout: ->
+    clearTimeout(@autoHideTimeout) if @autoHideTimeout?
+
+  _toggleSpinner: (show) ->
+    @$spinner.toggleClass('hide', show)
+
+  _defaults: (options, defaults) ->
+    for key, value of defaults
+      options[key] = defaults[key] unless options[key]?
+
+    options
