@@ -37,8 +37,7 @@ describe 'Blitz', ->
 
   describe 'auto hide', ->
     it 'does not auto-hide when disabled', (done) ->
-      blitz.setOptions(delay: 0)
-      blitz.notice('hi')
+      blitz.notice('hi', delay: 0)
 
       callback = ->
         expect(blitz.$wrapper).to.not.have.class('hide')
@@ -47,8 +46,7 @@ describe 'Blitz', ->
       setTimeout(callback, 2)
 
     it 'auto hides after a delay', (done) ->
-      blitz.setOptions(delay: 1)
-      blitz.notice('hi')
+      blitz.notice('hi', delay: 1)
 
       callback = ->
         expect(blitz.$wrapper).to.have.class('hide')
@@ -66,6 +64,12 @@ describe 'Blitz', ->
       blitz.notice('waiting...', spinner: false)
 
       expect(blitz.$spinner).to.have.class('hide')
+
+    it 'respects the default spinner option', ->
+      blitz.setOptions(spinner: true)
+      blitz.notice('waiting...')
+
+      expect(blitz.$spinner).to.not.have.class('hide')
 
   describe 'replace', ->
     it 'appends the dom element without a replace flag', ->

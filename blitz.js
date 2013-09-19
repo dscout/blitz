@@ -6,7 +6,8 @@
 
     Blitz.prototype.defaults = {
       delay: 0,
-      replace: false
+      replace: false,
+      spinner: false
     };
 
     function Blitz(container, options) {
@@ -47,9 +48,10 @@
     };
 
     Blitz.prototype._display = function(message, kind, options) {
-      this._render();
+      options = this._defaults(options, this.options);
+      this._render(options.replace);
       this._bindDomEvents();
-      this._startAutoHide();
+      this._startAutoHide(options.delay);
       this._toggleSpinner(options.spinner);
       this.$message.text(message);
       return this.$wrapper.addClass(kind).removeClass('hide');
@@ -80,15 +82,15 @@
       }
     };
 
-    Blitz.prototype._startAutoHide = function() {
+    Blitz.prototype._startAutoHide = function(delay) {
       var callback, self;
       this._clearTimeout();
-      if (this.options.delay > 0) {
+      if (delay > 0) {
         self = this;
         callback = function() {
           return self.hide();
         };
-        return this.autoHideTimeout = setTimeout(callback, this.options.delay);
+        return this.autoHideTimeout = setTimeout(callback, delay);
       }
     };
 

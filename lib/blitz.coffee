@@ -12,6 +12,7 @@ class window.Blitz
   defaults:
     delay: 0
     replace: false
+    spinner: false
 
   constructor: (container, options = {}) ->
     @container = container
@@ -31,9 +32,11 @@ class window.Blitz
     @$spinner.addClass('hide')
 
   _display: (message, kind, options) ->
-    @_render()
+    options = @_defaults(options, @options)
+
+    @_render(options.replace)
     @_bindDomEvents()
-    @_startAutoHide()
+    @_startAutoHide(options.delay)
     @_toggleSpinner(options.spinner)
     @$message.text(message)
     @$wrapper.addClass(kind).removeClass('hide')
@@ -59,14 +62,14 @@ class window.Blitz
       @$wrapper.on 'click.blitz', '.blitz-close', (event) ->
         self.hide()
 
-  _startAutoHide: ->
+  _startAutoHide: (delay) ->
     @_clearTimeout()
 
-    if @options.delay > 0
+    if delay > 0
       self     = @
       callback = -> self.hide()
 
-      @autoHideTimeout = setTimeout(callback, @options.delay)
+      @autoHideTimeout = setTimeout(callback, delay)
 
   _clearTimeout: ->
     clearTimeout(@autoHideTimeout) if @autoHideTimeout?

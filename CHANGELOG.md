@@ -1,5 +1,7 @@
 # v0.6.0 (Unreleased)
 
+* Display options, not render options, can be passed at display time to
+  override.
 * Rename `autoHideDelay` to simply `delay`. No other delays are predicted.
 * Allow configuration of append or replace. By passing a `replace` option you
   can entirely replace the container element with the rendered element.
