@@ -57,6 +57,23 @@ and auto-hiding container:
 </body>
 ```
 
+## Options
+
+### delay
+
+`number` - Configures the amount of time in milliseconds until the notification
+will auto-hide. Does not auto-hide with a value of 0 or less.
+
+### spinner
+
+`boolean` - Determines whether a spinner will be displayed for the duration of
+the notification.
+
+### replace
+
+`boolean` - If enabled the container element provided to the constructor will
+be entirely replaced when blitz is rendered. Otherwise the markup is appended.
+
 ## Development
 
 The project is built via [Grunt](http://gruntjs.com) and depdends on packages
