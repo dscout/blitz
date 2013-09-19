@@ -1,4 +1,6 @@
 class window.Blitz
+  @VERSION: '0.5.0'
+
   blitzTemplate: """
     <div class="blitz hide">
       <span class="blitz-message"></span>
