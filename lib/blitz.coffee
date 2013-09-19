@@ -11,6 +11,7 @@ class window.Blitz
 
   defaults:
     autoHideDelay: 0
+    replace: false
 
   constructor: (container, options = {}) ->
     @container = container
@@ -46,7 +47,10 @@ class window.Blitz
       @$spinner = $('.blitz-spinner', @$wrapper)
       @$close   = $('.blitz-close',   @$wrapper)
 
-      $(@container).append(@$wrapper)
+      if @options.replace
+        $(@container).replaceWith(@$wrapper)
+      else
+        $(@container).append(@$wrapper)
 
   _bindDomEvents: ->
     unless @_domEventsBound

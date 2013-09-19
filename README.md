@@ -47,7 +47,7 @@ and auto-hiding container:
   <div id="flash" data-message="Oopsy Daisy" data-type="alert"></div>
 
   <script>
-    var blitz   = new Blitz('#flash', { autoHideDelay: 5000 })
+    var blitz   = new Blitz('#flash', { replace: true, autoHideDelay: 5000 })
       , $flash  = $('#flash')
       , type    = $flash.attr('data-type')
       , message = $flash.attr('data-message')

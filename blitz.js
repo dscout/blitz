@@ -5,7 +5,8 @@
     Blitz.prototype.blitzTemplate = "<div class=\"blitz hide\">\n  <span class=\"blitz-message\"></span>\n  <span class=\"blitz-spinner hide\"></span>\n  <a href=\"#\" class=\"blitz-close\">&times;</a>\n</div>";
 
     Blitz.prototype.defaults = {
-      autoHideDelay: 0
+      autoHideDelay: 0,
+      replace: false
     };
 
     function Blitz(container, options) {
@@ -61,7 +62,11 @@
         this.$message = $('.blitz-message', this.$wrapper);
         this.$spinner = $('.blitz-spinner', this.$wrapper);
         this.$close = $('.blitz-close', this.$wrapper);
-        return $(this.container).append(this.$wrapper);
+        if (this.options.replace) {
+          return $(this.container).replaceWith(this.$wrapper);
+        } else {
+          return $(this.container).append(this.$wrapper);
+        }
       }
     };
 

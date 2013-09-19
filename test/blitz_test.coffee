@@ -2,10 +2,11 @@ describe 'Blitz', ->
   blitz = null
 
   beforeEach ->
+    $('body').append('<div id="blitz"></div>')
     blitz = new Blitz('#blitz')
 
   afterEach ->
-    $('#blitz').empty()
+    $('#blitz, .blitz').remove()
 
   describe '#notice', ->
     it 'sets the message', ->
@@ -65,3 +66,15 @@ describe 'Blitz', ->
       blitz.notice('waiting...', spinner: false)
 
       expect(blitz.$spinner).to.have.class('hide')
+
+  describe 'replace', ->
+    it 'appends the dom element without a replace flag', ->
+      blitz.notice('replace me')
+
+      expect($('#blitz')).to.have('.blitz')
+
+    it 'replaces the dom element when replace is passed', ->
+      blitz.setOptions(replace: true)
+      blitz.notice('replace me')
+
+      expect($('body')).to.not.have('#blitz')
