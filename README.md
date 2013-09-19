@@ -1,7 +1,19 @@
+[![Build Status](https://travis-ci.org/dscout/blitz.png?branch=master)](https://travis-ci.org/dscout/blitz)
+
 # Blitz (fl•ash)
 
 1. verb - Shine in a bright but brief, sudden, or intermittent way
 2. noun - Control the display of temporary messages
+
+![Blitz Example](http://assets-dscoutapp-com.s3.amazonaws.com/blitz_sample.png)
+
+## Installation
+
+Blitz can be installed using bower under the package name `blitz-alert`:
+
+```bash
+bower install blitz-alert
+```
 
 ## Development
 
