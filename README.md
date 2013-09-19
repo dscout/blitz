@@ -15,6 +15,48 @@ Blitz can be installed using bower under the package name `blitz-alert`:
 bower install blitz-alert
 ```
 
+## Usage
+
+Blitz is instantiated using a constructor:
+
+```javascript
+var blitz = new Blitz('#container');
+```
+
+Nothing will be rendered until you ask it to display a message, at which point
+it will inject itself into the container and display a `notice` or `alert`
+style message.
+
+Here is an example of using blitz to display an alert with a spinner and an
+auto-hide delay:
+
+```javascript
+var blitz = new Blitz('body');
+
+$.getJSON("http://www.bogus.url").fail(function() {
+  blitz.alert("You've made a huge mistake", { autoHideDelay: 5000, spinner: true });
+});
+```
+
+It is common for `flash` messages to be written to the page during a Rails
+request. With blitz you can easily display that message in an easily dismissed
+and auto-hiding container:
+
+```html
+<body>
+  <div id="flash" data-message="Oopsy Daisy" data-type="alert"></div>
+
+  <script>
+    var blitz   = new Blitz('#flash', { autoHideDelay: 5000 })
+      , $flash  = $('#flash')
+      , type    = $flash.attr('data-type')
+      , message = $flash.attr('data-message')
+
+    blitz[type](message)
+  </script>
+</body>
+```
+
 ## Development
 
 The project is built via [Grunt](http://gruntjs.com) and depdends on packages
