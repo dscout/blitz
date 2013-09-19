@@ -1,6 +1,6 @@
 (function() {
   window.Blitz = (function() {
-    Blitz.prototype.blitzTemplate = "<div class=\"blitz hide\">\n  <div class=\"blitz-wrapper\">\n    <span class=\"blitz-message\"></span>\n    <span class=\"blitz-spinner hide\"></span>\n    <a href=\"#\" class=\"blitz-close\">&times;</a>\n  </div>\n</div>";
+    Blitz.prototype.blitzTemplate = "<div class=\"blitz hide\">\n  <span class=\"blitz-message\"></span>\n  <span class=\"blitz-spinner hide\"></span>\n  <a href=\"#\" class=\"blitz-close\">&times;</a>\n</div>";
 
     Blitz.prototype.defaults = {
       autoHideDelay: 0
@@ -92,7 +92,7 @@
     };
 
     Blitz.prototype._toggleSpinner = function(show) {
-      return this.$spinner.toggleClass('hide', show);
+      return this.$spinner.toggleClass('hide', !show);
     };
 
     Blitz.prototype._defaults = function(options, defaults) {

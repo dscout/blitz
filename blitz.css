@@ -9,6 +9,7 @@
   opacity: 100;
   overflow: hidden;
   padding: 0;
+  position: relative;
   text-align: left;
   width: 100%;
 
@@ -37,7 +38,8 @@
 }
 
 .blitz.notice .blitz-spinner {
-  background: image-url('spinner-notice.gif') no-repeat 90% 50%;
+  border-color: #00738d;
+  border-top-color: rgba(255,255,255,0.5);
 }
 
 .blitz.alert {
@@ -51,12 +53,8 @@
 }
 
 .blitz.alert .blitz-spinner {
-  background: image-url('spinner-alert.gif') no-repeat 90% 50%;
-}
-
-.blitz-wrapper {
-  margin: 0 auto;
-  width: auto;
+  border-color: #560000;
+  border-top-color: rgba(255,255,255,0.5);
 }
 
 .blitz-message {
@@ -69,15 +67,95 @@
 }
 
 .blitz-spinner {
-  margin: 0 10px 0 0;
-  padding-right: 20px;
+  border-radius: 100%;
+  border: 2px solid rgba(100,100,100,0.5);
+  border-top-color: rgba(255,255,255,0.5);
+  height: 20px;
+  width: 20px;
+  margin: 5px;
+  display: block;
+  position: absolute;
+  right: 9px;
+  top: 1px;
+  z-index: 1000;
+
+  -webkit-animation: rotation 1.5s linear infinite;
+     -moz-animation: rotation 1.5s linear infinite;
+       -o-animation: rotation 1.5s linear infinite;
+          animation: rotation 1.5s linear infinite;
+}
+
+.blitz-spinner.hide {
+  display: none;
 }
 
 .blitz-close {
-  float: right;
   font-size: 1.5em;
   font-weight: bold;
   line-height: 34px;
   text-decoration: none;
-  margin-right: 20px;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  z-index: 1001;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+       -moz-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+       -moz-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+       -moz-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+       -moz-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+       -moz-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+       -moz-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }

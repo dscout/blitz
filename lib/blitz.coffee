@@ -1,11 +1,9 @@
 class window.Blitz
   blitzTemplate: """
     <div class="blitz hide">
-      <div class="blitz-wrapper">
-        <span class="blitz-message"></span>
-        <span class="blitz-spinner hide"></span>
-        <a href="#" class="blitz-close">&times;</a>
-      </div>
+      <span class="blitz-message"></span>
+      <span class="blitz-spinner hide"></span>
+      <a href="#" class="blitz-close">&times;</a>
     </div>
   """
 
@@ -68,7 +66,7 @@ class window.Blitz
     clearTimeout(@autoHideTimeout) if @autoHideTimeout?
 
   _toggleSpinner: (show) ->
-    @$spinner.toggleClass('hide', show)
+    @$spinner.toggleClass('hide', !show)
 
   _defaults: (options, defaults) ->
     for key, value of defaults

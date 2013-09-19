@@ -59,9 +59,9 @@ describe 'Blitz', ->
     it 'prepends a spinner when the spinner flag is passed', ->
       blitz.notice('waiting...', spinner: true)
 
-      expect(blitz.$spinner).to.have.class('hide')
+      expect(blitz.$spinner).to.not.have.class('hide')
 
     it 'does not prepend a spinner without the spinner flag', ->
       blitz.notice('waiting...', spinner: false)
 
-      expect(blitz.$spinner).to.not.have.class('hide')
+      expect(blitz.$spinner).to.have.class('hide')
