@@ -47,8 +47,14 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      files: ['lib/*.coffee', 'test/*.coffee'],
-      tasks: ['coffee:compile']
+      scripts: {
+        files: ['lib/*.coffee', 'test/*.coffee'],
+        tasks: ['coffee:compile']
+      },
+      sass: {
+        files: ['*.scss'],
+        tasks: ['sass']
+      }
     }
   });
 
