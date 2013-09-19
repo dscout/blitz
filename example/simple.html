@@ -39,9 +39,9 @@
         , displayB = function() { blitzB.success('Happy to report blitz succeeded', { spinner: true, delay: (Math.random() * 10000) }); }
         , displayC = function() { blitzC.alert('NO! This is blitz saying hello!',   { spinner: true, delay: (Math.random() * 10000) }); };
 
-        displayA()
-        displayB()
-        displayC()
+        displayA();
+        displayB();
+        displayC();
         setInterval(displayA, Math.random() * 10000);
         setInterval(displayB, Math.random() * 10000);
         setInterval(displayC, Math.random() * 10000);
