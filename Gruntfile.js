@@ -35,6 +35,17 @@ module.exports = function(grunt) {
       }
     },
 
+    sass: {
+      dist: {
+        options: {
+          outputStyle: 'nested'
+        },
+        files: {
+          'blitz.css': 'blitz.scss'
+        }
+      }
+    },
+
     watch: {
       files: ['lib/*.coffee', 'test/*.coffee'],
       tasks: ['coffee:compile']
@@ -44,8 +55,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-mocha');
 
-  grunt.registerTask('default', ['coffee:compile', 'mocha']);
-  grunt.registerTask('release', ['coffee:compile', 'mocha', 'uglify']);
+  grunt.registerTask('default', ['coffee:compile', 'sass', 'mocha']);
+  grunt.registerTask('release', ['default', 'uglify']);
 };
