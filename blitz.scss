@@ -20,50 +20,54 @@
   -webkit-transition: opacity 0.4s, height 0.4s;
      -moz-transition: opacity 0.4s, height 0.4s;
           transition: opacity 0.4s, height 0.4s;
-}
 
-.blitz.hide {
-  height: 0;
-  opacity: 0;
-}
+  &.hide {
+    height: 0;
+    opacity: 0;
+  }
 
-.blitz.notice {
-  background: #a7eeff;
-  border: 1px solid #8eeaff;
-  color: #00738d;
-}
+  &.notice {
+    background: #a7eeff;
+    border: 1px solid #8eeaff;
+    color: #00738d;
 
-.blitz.notice a {
-  color: #00738d;
-}
+    a {
+      color: #00738d;
+    }
 
-.blitz.notice .blitz-spinner {
-  border-color: #00738d;
-  border-top-color: rgba(255,255,255,0.5);
-}
+    .blitz-spinner {
+      border-color: #00738d;
+      border-top-color: rgba(255,255,255,0.5);
+    }
+  }
 
-.blitz.alert {
-  background: #ff7070;
-  border: 1px solid #ff5757;
-  color: #560000;
-}
+  &.alert {
+    background: #ff7070;
+    border: 1px solid #ff5757;
+    color: #560000;
 
-.blitz.alert a {
-  color: #560000;
-}
+    a {
+      color: #560000;
+    }
 
-.blitz.alert .blitz-spinner {
-  border-color: #560000;
-  border-top-color: rgba(255,255,255,0.5);
+    .blitz-spinner {
+      border-color: #560000;
+      border-top-color: rgba(255,255,255,0.5);
+    }
+  }
+
+  &.success {
+    background: #2ecc71;
+  }
 }
 
 .blitz-message {
   padding: 20px 0 20px 20px;
-}
 
-.blitz-message a {
-  font-weight: bold;
-  text-decoration: underline;
+  a {
+    font-weight: bold;
+    text-decoration: underline;
+  }
 }
 
 .blitz-spinner {
@@ -83,10 +87,10 @@
      -moz-animation: rotation 1.5s linear infinite;
        -o-animation: rotation 1.5s linear infinite;
           animation: rotation 1.5s linear infinite;
-}
 
-.blitz-spinner.hide {
-  display: none;
+  &.hide {
+    display: none;
+  }
 }
 
 .blitz-close {
