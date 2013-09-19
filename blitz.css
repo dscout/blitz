@@ -1,0 +1,83 @@
+.blitz {
+  border: 1px solid #ccc;
+  clear: both;
+  font-size: 12px;
+  font-weight: bold;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 0 20px 0;
+  opacity: 100;
+  overflow: hidden;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+
+  -webkit-transition: opacity 0.4s, height 0.4s;
+     -moz-transition: opacity 0.4s, height 0.4s;
+          transition: opacity 0.4s, height 0.4s;
+}
+
+.blitz.hide {
+  height: 0;
+  opacity: 0;
+}
+
+.blitz.notice {
+  background: #a7eeff;
+  border: 1px solid #8eeaff;
+  color: #00738d;
+}
+
+.blitz.notice a {
+  color: #00738d;
+}
+
+.blitz.notice .blitz-spinner {
+  background: image-url('spinner-notice.gif') no-repeat 90% 50%;
+}
+
+.blitz.alert {
+  background: #ff7070;
+  border: 1px solid #ff5757;
+  color: #560000;
+}
+
+.blitz.alert a {
+  color: #560000;
+}
+
+.blitz.alert .blitz-spinner {
+  background: image-url('spinner-alert.gif') no-repeat 90% 50%;
+}
+
+.blitz-wrapper {
+  margin: 0 auto;
+  width: auto;
+}
+
+.blitz-message {
+  padding: 20px 0 20px 20px;
+}
+
+.blitz-message a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.blitz-spinner {
+  margin: 0 10px 0 0;
+  padding-right: 20px;
+}
+
+.blitz-close {
+  float: right;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 34px;
+  text-decoration: none;
+  margin-right: 20px;
+}
