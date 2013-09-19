@@ -37,7 +37,7 @@ describe 'Blitz', ->
 
   describe 'auto hide', ->
     it 'does not auto-hide when disabled', (done) ->
-      blitz.setOptions(autoHideDelay: 0)
+      blitz.setOptions(delay: 0)
       blitz.notice('hi')
 
       callback = ->
@@ -47,7 +47,7 @@ describe 'Blitz', ->
       setTimeout(callback, 2)
 
     it 'auto hides after a delay', (done) ->
-      blitz.setOptions(autoHideDelay: 1)
+      blitz.setOptions(delay: 1)
       blitz.notice('hi')
 
       callback = ->

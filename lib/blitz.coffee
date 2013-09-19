@@ -10,7 +10,7 @@ class window.Blitz
   """
 
   defaults:
-    autoHideDelay: 0
+    delay: 0
     replace: false
 
   constructor: (container, options = {}) ->
@@ -62,11 +62,11 @@ class window.Blitz
   _startAutoHide: ->
     @_clearTimeout()
 
-    if @options.autoHideDelay > 0
+    if @options.delay > 0
       self     = @
       callback = -> self.hide()
 
-      @autoHideTimeout = setTimeout(callback, @options.autoHideDelay)
+      @autoHideTimeout = setTimeout(callback, @options.delay)
 
   _clearTimeout: ->
     clearTimeout(@autoHideTimeout) if @autoHideTimeout?

@@ -5,7 +5,7 @@
     Blitz.prototype.blitzTemplate = "<div class=\"blitz hide\">\n  <span class=\"blitz-message\"></span>\n  <span class=\"blitz-spinner hide\"></span>\n  <a href=\"#\" class=\"blitz-close\">&times;</a>\n</div>";
 
     Blitz.prototype.defaults = {
-      autoHideDelay: 0,
+      delay: 0,
       replace: false
     };
 
@@ -83,12 +83,12 @@
     Blitz.prototype._startAutoHide = function() {
       var callback, self;
       this._clearTimeout();
-      if (this.options.autoHideDelay > 0) {
+      if (this.options.delay > 0) {
         self = this;
         callback = function() {
           return self.hide();
         };
-        return this.autoHideTimeout = setTimeout(callback, this.options.autoHideDelay);
+        return this.autoHideTimeout = setTimeout(callback, this.options.delay);
       }
     };
 

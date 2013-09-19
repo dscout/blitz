@@ -34,7 +34,7 @@ auto-hide delay:
 var blitz = new Blitz('body');
 
 $.getJSON("http://www.bogus.url").fail(function() {
-  blitz.alert("You've made a huge mistake", { autoHideDelay: 5000, spinner: true });
+  blitz.alert("You've made a huge mistake", { delay: 5000, spinner: true });
 });
 ```
 
@@ -47,7 +47,7 @@ and auto-hiding container:
   <div id="flash" data-message="Oopsy Daisy" data-type="alert"></div>
 
   <script>
-    var blitz   = new Blitz('#flash', { replace: true, autoHideDelay: 5000 })
+    var blitz   = new Blitz('#flash', { replace: true, delay: 5000 })
       , $flash  = $('#flash')
       , type    = $flash.attr('data-type')
       , message = $flash.attr('data-message')
