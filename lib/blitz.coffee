@@ -14,7 +14,7 @@ class window.Blitz
 
   constructor: (container, options = {}) ->
     @container = container
-    @options   = options
+    @options   = @_defaults(options, @defaults)
 
   setOptions: (options) ->
     @options[key] = value for key, value of options

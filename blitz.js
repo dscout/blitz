@@ -11,7 +11,7 @@
         options = {};
       }
       this.container = container;
-      this.options = options;
+      this.options = this._defaults(options, this.defaults);
     }
 
     Blitz.prototype.setOptions = function(options) {
