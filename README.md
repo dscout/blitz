@@ -57,6 +57,17 @@ and auto-hiding container:
 </body>
 ```
 
+Notifications all behave the same way, but have a different theme. Currently
+the notification types are `success`, `notice`, and `alert`. Each is used like so:
+
+```javascript
+var blitz = new Blitz('#flash');
+
+blitz.success("That worked out splendidly!");
+blitz.notice("You're signed in, just wanted you to know")
+blitz.alert("Uh oh. That can't be good")
+```
+
 ## Options
 
 ### delay

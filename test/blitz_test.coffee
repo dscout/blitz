@@ -23,9 +23,19 @@ describe 'Blitz', ->
       blitz.alert('Yikes!')
       expect(blitz.$message).to.contain('Yikes!')
 
-    it 'sets the class to notice', ->
+    it 'sets the class to alert', ->
       blitz.alert('Yikes!')
       expect(blitz.$wrapper).to.have.class('alert')
+      expect(blitz.$wrapper).to.not.have.class('hide')
+
+  describe '#success', ->
+    it 'sets the message', ->
+      blitz.success('Yippee!')
+      expect(blitz.$message).to.contain('Yippee!')
+
+    it 'sets the class to success', ->
+      blitz.success('Yippee!')
+      expect(blitz.$wrapper).to.have.class('success')
       expect(blitz.$wrapper).to.not.have.class('hide')
 
   describe 'closing', ->

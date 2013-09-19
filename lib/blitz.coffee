@@ -27,6 +27,9 @@ class window.Blitz
   alert: (message, options = {}) ->
     @_display(message, 'alert', options)
 
+  success: (message, options = {}) ->
+    @_display(message, 'success', options)
+
   hide: ->
     @$wrapper.addClass('hide')
     @$spinner.addClass('hide')

@@ -42,6 +42,13 @@
       return this._display(message, 'alert', options);
     };
 
+    Blitz.prototype.success = function(message, options) {
+      if (options == null) {
+        options = {};
+      }
+      return this._display(message, 'success', options);
+    };
+
     Blitz.prototype.hide = function() {
       this.$wrapper.addClass('hide');
       return this.$spinner.addClass('hide');

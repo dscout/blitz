@@ -1,5 +1,6 @@
 # v0.6.0 (Unreleased)
 
+* Add a `success` method for happy notifications.
 * Display options, not render options, can be passed at display time to
   override.
 * Rename `autoHideDelay` to simply `delay`. No other delays are predicted.
