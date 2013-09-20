@@ -1,4 +1,4 @@
-# v0.6.0 (Unreleased)
+# v0.6.0
 
 * Precompile SCSS instead of vanilla CSS.
 * Add a `success` method for happy notifications.
