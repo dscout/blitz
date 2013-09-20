@@ -3,9 +3,11 @@ class window.Blitz
 
   blitzTemplate: """
     <div class="blitz hide">
-      <span class="blitz-message"></span>
-      <span class="blitz-spinner hide"></span>
-      <a href="#" class="blitz-close">&times;</a>
+      <div class="blitz-inner-wrapper">
+        <span class="blitz-message"></span>
+        <span class="blitz-spinner hide"></span>
+        <a href="#" class="blitz-close">&times;</a>
+      </div>
     </div>
   """
 

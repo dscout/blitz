@@ -2,7 +2,7 @@
   window.Blitz = (function() {
     Blitz.VERSION = '0.6.0';
 
-    Blitz.prototype.blitzTemplate = "<div class=\"blitz hide\">\n  <span class=\"blitz-message\"></span>\n  <span class=\"blitz-spinner hide\"></span>\n  <a href=\"#\" class=\"blitz-close\">&times;</a>\n</div>";
+    Blitz.prototype.blitzTemplate = "<div class=\"blitz hide\">\n  <div class=\"blitz-inner-wrapper\">\n    <span class=\"blitz-message\"></span>\n    <span class=\"blitz-spinner hide\"></span>\n    <a href=\"#\" class=\"blitz-close\">&times;</a>\n  </div>\n</div>";
 
     Blitz.prototype.defaults = {
       delay: 0,

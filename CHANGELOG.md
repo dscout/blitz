@@ -1,5 +1,7 @@
 # v0.6.1
 
+* Wrap internal markup for finer control. This is particularly useful for
+  having a full width notification while keeping the text mostly centered.
 * Remove any prior message classes when displaying new messages.
 
 # v0.6.0
