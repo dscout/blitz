@@ -42,7 +42,7 @@ class window.Blitz
     @_startAutoHide(options.delay)
     @_toggleSpinner(options.spinner)
     @$message.text(message)
-    @$wrapper.addClass(kind).removeClass('hide')
+    @$wrapper.removeClass('hide notice alert success').addClass(kind)
 
   _render: ->
     unless @_rendered

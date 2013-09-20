@@ -38,6 +38,14 @@ describe 'Blitz', ->
       expect(blitz.$wrapper).to.have.class('success')
       expect(blitz.$wrapper).to.not.have.class('hide')
 
+  describe 'successive messages', ->
+    it 'removes any prior message class', ->
+      blitz.success('Yippee!')
+      blitz.alert('Yippee!')
+      blitz.notice('Yippee!')
+      expect(blitz.$wrapper).to.not.have.class('success')
+      expect(blitz.$wrapper).to.not.have.class('alert')
+
   describe 'closing', ->
     it 'hides the element', ->
       blitz.notice('Waiting')

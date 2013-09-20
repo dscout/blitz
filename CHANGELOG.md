@@ -1,3 +1,7 @@
+# v0.6.1
+
+* Remove any prior message classes when displaying new messages.
+
 # v0.6.0
 
 * Precompile SCSS instead of vanilla CSS.

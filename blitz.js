@@ -61,7 +61,7 @@
       this._startAutoHide(options.delay);
       this._toggleSpinner(options.spinner);
       this.$message.text(message);
-      return this.$wrapper.addClass(kind).removeClass('hide');
+      return this.$wrapper.removeClass('hide notice alert success').addClass(kind);
     };
 
     Blitz.prototype._render = function() {
