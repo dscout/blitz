@@ -40,7 +40,14 @@
       border-color: #560000;
       border-top-color: rgba(255, 255, 255, 0.5); }
   .blitz.success {
-    background: #2ecc71; }
+    background: #2ecc71;
+    border: 1px solid #21a861;
+    color: #0a5d2d; }
+    .blitz.success a {
+      color: #0a5d2d; }
+    .blitz.success .blitz-spinner {
+      border-color: #0a5d2d;
+      border-top-color: rgba(255, 255, 255, 0.5); }
 
 .blitz-message {
   padding: 20px 0 20px 20px; }

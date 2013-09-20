@@ -58,6 +58,17 @@
 
   &.success {
     background: #2ecc71;
+    border: 1px solid #21a861;
+    color: #0a5d2d;
+
+    a {
+      color: #0a5d2d;
+    }
+
+    .blitz-spinner {
+      border-color: #0a5d2d;
+      border-top-color: rgba(255,255,255,0.5);
+    }
   }
 }
 
