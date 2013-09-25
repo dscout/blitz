@@ -1,0 +1,194 @@
+@font-face {
+	font-family: 'blitz';
+	src:url('./fonts/blitz.eot');
+	src:url('./fonts/blitz.eot?#iefix') format('embedded-opentype'),
+		url('./fonts/blitz.woff') format('woff'),
+		url('./fonts/blitz.ttf') format('truetype'),
+		url('./fonts/blitz.svg#blitz') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+  background: #fff;
+  color: #4c5259;
+  font: 16px/1.5 "Helvetica-Neue", Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 800px;
+  margin: 60px auto;
+}
+
+header {
+  background: #f9f9f9;
+  margin-bottom: 60px;
+  padding: 60px 0;
+  text-align: center;
+}
+
+h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 72px;
+  font-weight: normal;
+  position: relative;
+}
+
+h2 { font-weight: 300; }
+
+.logo {
+  display: inline-block;
+  height: 78px;
+  margin-right: 10px;
+  position: relative;
+  top: 15px;
+  width: 78px;
+}
+
+.logo:before {
+  content: '\e000';
+  font-family: 'blitz';
+  font-size: 48px;
+  position: relative;
+  top: -18px;
+}
+
+.logo-spinner {
+  border: 3px solid rgba(100,100,100,0.5);
+  border-top-color: rgba(200,200,200,0.5);
+  border-radius: 100%;
+  display: block;
+  height: 72px;
+  position: absolute;
+  top: 0;
+  width: 72px;
+
+  -webkit-animation: rotation 1.5s linear infinite;
+     -moz-animation: rotation 1.5s linear infinite;
+       -o-animation: rotation 1.5s linear infinite;
+          animation: rotation 1.5s linear infinite;
+}
+
+h2 {
+  color: #bdc3c7;
+  margin-bottom: 30px;
+}
+
+.github {
+  background-color: #ecf0f1;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#ecf0f1));
+  background-image: -webkit-linear-gradient(top, #ffffff, #ecf0f1);
+  background-image:    -moz-linear-gradient(top, #ffffff, #ecf0f1);
+  background-image:     -ms-linear-gradient(top, #ffffff, #ecf0f1);
+  border: 1px solid #bdc3c7;
+  border-radius: 7px;
+  color: #95a5a6;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 20px;
+  padding: 15px;
+  text-decoration: none;
+
+  -webkit-transition: color 0.3s;
+     -moz-transition: color 0.3s;
+          transition: color 0.3s;
+}
+
+.github:hover { color: #4c5259; }
+
+.version {
+  background: #fff;
+  border: 1px solid #dfdfdf;
+  border-radius: 4px;
+  color: #bdc3c7;
+  display: inline-block;
+  padding: 5px;
+}
+
+.version:before { content: "v "; }
+
+footer {
+  bottom: 0;
+  color: #bdc3c7;
+  font-size: 0.9em;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+footer a {
+  color: #bdc3c7;
+
+  -webkit-transition: color 0.3s;
+     -moz-transition: color 0.3s;
+          transition: color 0.3s;
+}
+
+footer a:hover { color: #4c5259; }
+
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+       -moz-trasform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+       -moz-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+       -moz-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+       -moz-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+       -moz-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+       -moz-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
