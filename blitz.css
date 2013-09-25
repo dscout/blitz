@@ -23,25 +23,25 @@
     opacity: 0; }
   .blitz.notice {
     background: #a7eeff;
-    border: 1px solid #8eeaff;
+    border: 1px solid #74e6ff;
     color: #00738d; }
     .blitz.notice a {
-      color: #00738d; }
+      color: #0088a7; }
     .blitz.notice .blitz-spinner {
       border-color: #00738d;
       border-top-color: rgba(255, 255, 255, 0.5); }
   .blitz.alert {
     background: #ff7070;
-    border: 1px solid #ff5757;
+    border: 1px solid #ff3d3d;
     color: #560000; }
     .blitz.alert a {
-      color: #560000; }
+      color: #700000; }
     .blitz.alert .blitz-spinner {
       border-color: #560000;
       border-top-color: rgba(255, 255, 255, 0.5); }
   .blitz.success {
-    background: #2ecc71;
-    border: 1px solid #21a861;
+    background: #69c83a;
+    border: 1px solid #54a22d;
     color: #0a5d2d; }
     .blitz.success a {
       color: #0a5d2d; }
@@ -59,13 +59,13 @@
   border-radius: 100%;
   border: 2px solid rgba(100, 100, 100, 0.5);
   border-top-color: rgba(255, 255, 255, 0.5);
-  height: 20px;
-  width: 20px;
-  margin: 5px;
   display: block;
+  height: 20px;
+  margin: 5px;
   position: absolute;
   right: 9px;
   top: 1px;
+  width: 20px;
   z-index: 1000;
   -webkit-animation: rotation 1.5s linear infinite;
   -moz-animation: rotation 1.5s linear infinite;
@@ -78,9 +78,9 @@
   font-size: 1.5em;
   font-weight: bold;
   line-height: 34px;
-  text-decoration: none;
   position: absolute;
   right: 20px;
+  text-decoration: none;
   top: 0;
   z-index: 1001; }
 
