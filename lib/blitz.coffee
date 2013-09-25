@@ -1,5 +1,5 @@
 class window.Blitz
-  @VERSION: '0.6.1'
+  @VERSION: '0.7.0'
 
   blitzTemplate: """
     <div class="blitz hide">
