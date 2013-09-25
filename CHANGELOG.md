@@ -1,3 +1,7 @@
+# v0.6.2 (Unreleased)
+
+* Prevent event bubbling when clicking "hide".
+
 # v0.6.1
 
 * Wrap internal markup for finer control. This is particularly useful for

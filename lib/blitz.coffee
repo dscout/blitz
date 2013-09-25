@@ -66,6 +66,7 @@ class window.Blitz
 
       @$wrapper.on 'click.blitz', '.blitz-close', (event) ->
         self.hide()
+        false
 
   _startAutoHide: (delay) ->
     @_clearTimeout()

@@ -84,7 +84,8 @@
       if (!this._domEventsBound) {
         self = this;
         return this.$wrapper.on('click.blitz', '.blitz-close', function(event) {
-          return self.hide();
+          self.hide();
+          return false;
         });
       }
     };
