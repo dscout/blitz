@@ -43,7 +43,7 @@ class window.Blitz
     @_bindDomEvents()
     @_startAutoHide(options.delay)
     @_toggleSpinner(options.spinner)
-    @$message.text(message)
+    @$message.html(message)
     @$wrapper.removeClass('hide notice alert success').addClass(kind)
 
   _render: ->

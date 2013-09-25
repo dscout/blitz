@@ -38,6 +38,11 @@ describe 'Blitz', ->
       expect(blitz.$wrapper).to.have.class('success')
       expect(blitz.$wrapper).to.not.have.class('hide')
 
+  describe 'html injection', ->
+    it 'does not sanitize html elements from the alert', ->
+      blitz.success('Yay! <a href="#">Click Here</a>')
+      expect(blitz.$message).to.have.text('Yay! Click Here')
+
   describe 'successive messages', ->
     it 'removes any prior message class', ->
       blitz.success('Yippee!')

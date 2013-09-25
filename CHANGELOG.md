@@ -1,5 +1,6 @@
-# v0.6.2 (Unreleased)
+# v0.7.0 (Unreleased)
 
+* Display html rather than pure text. Prevents sanitizing `b`, `a` elements.
 * Prevent event bubbling when clicking "hide".
 
 # v0.6.1

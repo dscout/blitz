@@ -60,7 +60,7 @@
       this._bindDomEvents();
       this._startAutoHide(options.delay);
       this._toggleSpinner(options.spinner);
-      this.$message.text(message);
+      this.$message.html(message);
       return this.$wrapper.removeClass('hide notice alert success').addClass(kind);
     };
 
