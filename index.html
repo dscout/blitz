@@ -14,7 +14,7 @@
           <span class="logo-spinner"></span>
         </div>
         Blitz
-        <span class="version">0.7.0</span>
+        <span class="version"></span>
       </h1>
       <h2>A light weight, temporary message notification system</h2>
       <a class="github" href="https://github.com/dscout/blitz" target="_blank">View on GitHub</a>
@@ -46,6 +46,8 @@
         setInterval(displayA, Math.random() * 10000);
         setInterval(displayB, Math.random() * 10000);
         setInterval(displayC, Math.random() * 10000);
+
+      $('.version').text(Blitz.VERSION)
     </script>
   </body>
 </html>
