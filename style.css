@@ -18,12 +18,13 @@ body {
 }
 
 .wrapper {
-  width: 800px;
   margin: 60px auto;
+  width: 800px;
 }
 
 header {
-  background: #f9f9f9;
+  background: #f5f7f9;
+  border-bottom: 1px solid #dfdfdf;
   margin-bottom: 60px;
   padding: 60px 0;
   text-align: center;
@@ -41,18 +42,22 @@ h1 {
   position: relative;
 }
 
-h2 { font-weight: 300; }
+h2 {
+  color: #95a5a6;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
 
 .logo {
   display: inline-block;
   height: 78px;
-  margin-right: 10px;
   position: relative;
   top: 15px;
   width: 78px;
 }
 
 .logo:before {
+  color: rgba(253,187,0,0.5);
   content: '\e000';
   font-family: 'blitz';
   font-size: 48px;
@@ -74,11 +79,6 @@ h2 { font-weight: 300; }
      -moz-animation: rotation 1.5s linear infinite;
        -o-animation: rotation 1.5s linear infinite;
           animation: rotation 1.5s linear infinite;
-}
-
-h2 {
-  color: #bdc3c7;
-  margin-bottom: 30px;
 }
 
 .github {
@@ -109,10 +109,11 @@ h2 {
   border-radius: 4px;
   color: #bdc3c7;
   display: inline-block;
-  padding: 5px;
+  font-size: 18px;
+  padding: 3px 5px;
+  position: relative;
+  top: -15px;
 }
-
-.version:before { content: "v "; }
 
 footer {
   bottom: 0;
