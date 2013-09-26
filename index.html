@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Blitz</title>
+    <link rel="stylesheet" href="blitz.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+
+  <body>
+    <header>
+      <h1><div class="logo"><span class="logo-spinner"></span></div>Blitz</h1>
+      <h2>A lightweight, temporary message notification system</h2>
+      <a class="github" href="https://github.com/dscout/blitz" target="_blank">View on GitHub</a>
+      <span class="version">0.7.0</span>
+    </header>
+
+    <div class="wrapper">
+      <div id="blitz-notice"></div>
+      <div id="blitz-success"></div>
+      <div id="blitz-alert"></div>
+    </div>
+
+    <footer>
+      <p>&copy; 2013 <a href="http://dscout.com" target="_blank">dscout, inc.</a></p>
+    </footer>
+
+    <script src="http://codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="blitz.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var blitzA = new Blitz('#blitz-notice',  { replace: true })
+        , blitzB = new Blitz('#blitz-success', { replace: true })
+        , blitzC = new Blitz('#blitz-alert',   { replace: true })
+        , displayA = function() { blitzA.notice('This is blitz saying hello!',      { spinner: true, delay: (Math.random() * 10000) }); }
+        , displayB = function() { blitzB.success('Happy to report blitz succeeded', { spinner: true, delay: (Math.random() * 10000) }); }
+        , displayC = function() { blitzC.alert('NO! This is blitz saying hello!',   { spinner: true, delay: (Math.random() * 10000) }); };
+
+        displayA();
+        displayB();
+        displayC();
+        setInterval(displayA, Math.random() * 10000);
+        setInterval(displayB, Math.random() * 10000);
+        setInterval(displayC, Math.random() * 10000);
+    </script>
+  </body>
+</html>
