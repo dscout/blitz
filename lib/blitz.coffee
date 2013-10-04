@@ -33,8 +33,9 @@ class window.Blitz
     @_display(message, 'success', options)
 
   hide: ->
-    @$wrapper.addClass('hide')
-    @$spinner.addClass('hide')
+    if @$wrapper? and @$spinner?
+      @$wrapper.addClass('hide')
+      @$spinner.addClass('hide')
 
   _display: (message, kind, options) ->
     options = @_defaults(options, @options)

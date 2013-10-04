@@ -50,8 +50,10 @@
     };
 
     Blitz.prototype.hide = function() {
-      this.$wrapper.addClass('hide');
-      return this.$spinner.addClass('hide');
+      if ((this.$wrapper != null) && (this.$spinner != null)) {
+        this.$wrapper.addClass('hide');
+        return this.$spinner.addClass('hide');
+      }
     };
 
     Blitz.prototype._display = function(message, kind, options) {

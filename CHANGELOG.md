@@ -1,3 +1,7 @@
+# v0.7.1
+
+* Don't error on hide if the message was never rendered.
+
 # v0.7.0
 
 * Display html rather than pure text. Prevents sanitizing `b`, `a` elements.
